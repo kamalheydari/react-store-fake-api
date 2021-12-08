@@ -32,7 +32,7 @@ export const cart_reducer = (state, action) => {
         price,
         amount,
       };
-      return { ...state, cart: [...state.cart, newItem] };
+      return { ...state, cart: [...state.cart, newItem], isCheckout: false };
     }
   }
 
