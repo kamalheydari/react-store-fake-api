@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
+import Screen from "../utils/Screen";
+
 import { FaShoppingCart } from "react-icons/fa";
 
 import { useProductsContext } from "../contexts/products_context";
@@ -38,6 +40,9 @@ const Wrapper = styled.div`
     display: flex;
     margin-right: 3rem;
     border-bottom: 0.2rem solid transparent;
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
   .active {
     border-color: var(--red-color-1);

@@ -83,8 +83,8 @@ const Wrapper = styled.div`
     margin-bottom: 4rem;
     a {
       display: block;
-      padding: 0.7rem;
-
+      padding: 1rem;
+      font-size: 1.8rem;
       &:hover {
         padding-left: 1.5rem;
       }
