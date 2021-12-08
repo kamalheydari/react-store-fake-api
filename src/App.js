@@ -5,7 +5,7 @@ import { HashRouter as Router } from "react-router-dom";
 import { Navbar, Sidebar, Footer } from "./components";
 import Routes from "./routes/Routes";
 
-// basename="https://kamalheydari.github.io/react-store-fake-api"
+
 
 const App = () => {
   return (
