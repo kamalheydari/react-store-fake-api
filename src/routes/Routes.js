@@ -9,6 +9,7 @@ import {
   CartPage,
   ErrorPage,
   SingleProductPage,
+  CheckoutPage,
 } from "../pages";
 
 const Routes = () => {
@@ -27,8 +28,8 @@ const Routes = () => {
           <Route path="/products" component={ProductsPage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/cart" component={CartPage} />
+          <Route path="/checkout" component={CheckoutPage} />
           <Route path="*" component={ErrorPage} />
-          {/* <Redirect from="/" to="/home" /> */}
         </Switch>
       </CSSTransition>
     </TransitionGroup>

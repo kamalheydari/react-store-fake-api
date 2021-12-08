@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Screen from "../utils/Screen";
 
 import { useCartContext } from "../contexts/cart_context";
+import { Link } from "react-router-dom";
 
 const CartTotals = () => {
   const { total_items, total_price, checkout } = useCartContext();
@@ -18,15 +19,20 @@ const CartTotals = () => {
         </h4>
       </div>
       <hr />
-      <button type="button" className="total__btn " onClick={checkout}>
+      <Link
+        to="/checkout"
+        type="button"
+        className="total__btn "
+        onClick={checkout}
+      >
         Checkout
-      </button>
+      </Link>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.article`
-  border: var(--border);
+  border: 0.2rem solid var(--green-color-1);
   border-radius: var(--radius);
   padding: 1rem 1.5rem;
   ${Screen.lg`
@@ -57,6 +63,8 @@ const Wrapper = styled.article`
     padding: 0.5rem;
     color: var(--white-color);
     font-size: 1.4rem;
+    display: inline-block;
+    text-align: center;
     letter-spacing: 0.2rem;
     border: 0.2rem solid var(--green-color-1);
     transition: var(--transition);

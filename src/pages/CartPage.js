@@ -4,22 +4,12 @@ import styled from "styled-components";
 
 import Screen from "../utils/Screen";
 
-import {
-  Breadcrumb,
-  CartItem,
-  CartTotals,
-  Checkout,
-  EmptyCart,
-} from "../components";
+import { Breadcrumb, CartItem, CartTotals, EmptyCart } from "../components";
 
 import { useCartContext } from "../contexts/cart_context";
 
 const CartPage = () => {
-  const { cart, clearCart, isCheckout } = useCartContext();
-
-  if (isCheckout) {
-    return <Checkout />;
-  }
+  const { cart, clearCart } = useCartContext();
 
   if (cart.length < 1) {
     return <EmptyCart />;
