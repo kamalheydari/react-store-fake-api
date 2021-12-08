@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="hero__title">
           <span>Everything</span> <br /> you need to be good looking
         </h1>
-        <Link to="/products" className="header__link green-box">
+        <Link to="/products" className="header__link ">
           Shop Now
         </Link>
         <div className="hero__img">
@@ -55,7 +55,13 @@ const Wrapper = styled.section`
   }
   .header__link {
     width: max-content;
+    padding: 0.3rem 0.6rem;
+    border: 0.2rem solid var(--green-color-1);
+    border-radius: var(--radius);
     z-index: 1;
+    &:hover {
+      background: var(--white-color);
+    }
   }
   .hero__img {
     width: min(90%, 480px);

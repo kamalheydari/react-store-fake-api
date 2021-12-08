@@ -23,7 +23,7 @@ const AmountButtons = ({ increase, decrease, amount }) => {
 const Wrapper = styled.div`
   width: max-content;
   display: flex;
-  gap: 2rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
   .dec-btn {
     color: var(--red-color-1);

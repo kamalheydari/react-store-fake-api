@@ -58,9 +58,7 @@ const SingleProductPage = () => {
             <img src={image} alt={title} />
           </div>
           <div className="product__info">
-            <Link to="/products" className="red-box">
-              back to products
-            </Link>
+            <Link to="/products">back to products</Link>
             <h2>{title}</h2>
             <Stars stars={rating} />
             <p className="info__price">
@@ -106,6 +104,14 @@ const Wrapper = styled.section`
         height: max-content;
         width: max-content;
         padding: 0.2rem 1.5rem;
+        letter-spacing: 1px;
+        color: var(--gray-color-1);
+        transition: var(--transition);
+        border: 0.2rem solid var(--red-color-1);
+        &:hover {
+          background: var(--red-color-1);
+          color: var(--white-color);
+        }
       }
       .info__price {
         color: var(--green-color-1);

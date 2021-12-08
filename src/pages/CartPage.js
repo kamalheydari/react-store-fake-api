@@ -35,10 +35,8 @@ const CartPage = () => {
             ))}
           </div>
           <div className="cart__links">
-            <Link to="/products" className="green-box">
-              Buy more
-            </Link>
-            <button className="clear-btn red-box " onClick={clearCart}>
+            <Link to="/products">Buy more</Link>
+            <button className="clear-btn  " onClick={clearCart}>
               Clear shopping cart
             </button>
           </div>
@@ -61,17 +59,33 @@ const Wrapper = styled.section`
     grid-column: 1/3;
     `}
   }
+  .cart__items {
+    padding: 1rem;
+  }
   .cart__links {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
     a {
-      padding: 0.2rem 1rem;
+      border: 0.2rem solid var(--green-color-1);
+      border-radius: var(--radius);
+      padding: 0.3rem 1rem;
+      &:hover {
+        background: var(--white-color);
+      }
     }
     .clear-btn {
-      padding: 0.2rem 1rem;
+      padding: 0.3rem 1rem;
+      letter-spacing: 1px;
       font-size: 1.3rem;
+      border: 0.2rem solid var(--red-color-1);
+      border-radius: var(--radius);
+      transition: var(--transition);
+      &:hover {
+        background: var(--red-color-1);
+        color: var(--white-color);
+      }
     }
   }
 `;

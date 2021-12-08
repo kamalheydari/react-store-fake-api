@@ -16,9 +16,7 @@ const ListProducts = ({ products }) => {
             <h3>{title}</h3>
             <p className="price">${price}</p>
             <p>{truncate(description, 120)}</p>
-            <Link to={`/products/${id}`} className="green-box">
-              Details
-            </Link>
+            <Link to={`/products/${id}`}>Details</Link>
           </div>
         </article>
       ))}
@@ -38,7 +36,7 @@ const Wrapper = styled.div`
     transition: var(--transition);
     transform: scale(1);
     &:hover {
-      box-shadow: var(--shadow);
+      box-shadow: 0 0 1rem 1rem var(--bg-color);
       transform: scale(1.01);
     }
     img {
@@ -62,6 +60,7 @@ const Wrapper = styled.div`
     a {
       width: max-content;
       padding: 0.3rem 1rem;
+      border: 0.2rem solid var(--green-color-1);
       &:hover {
         border-color: var(--red-color-1);
         color: var(--red-color-1);

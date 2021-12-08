@@ -7,9 +7,7 @@ const Checkout = () => {
     <Wrapper className="page-w-b">
       <div>
         <h2>Checkout Successfully</h2>
-        <Link to="/products" className="green-box">
-          Back to shop
-        </Link>
+        <Link to="/products">Back to shop</Link>
       </div>
     </Wrapper>
   );
@@ -19,6 +17,11 @@ const Wrapper = styled.section`
   place-items: center;
   h2 {
     margin-bottom: 1rem;
+  }
+  a {
+    border: 0.2rem solid var(--green-color-1);
+    border-radius: var(--radius);
+    padding: 0.2rem 1rem;
   }
 `;
 export default Checkout;

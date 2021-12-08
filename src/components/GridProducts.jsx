@@ -31,6 +31,7 @@ const Wrapper = styled.div`
   display: grid;
   gap: 2rem 1.5rem;
   justify-content: center;
+
   ${Screen.sm`
   grid-template-columns: 1fr 1fr;
 `}
@@ -45,9 +46,10 @@ article {
     border-radius: var(--radius);
     transition: var(--transition);
     transform: scale(1);
+    min-height: 35rem;
 
     &:hover {
-      box-shadow: var(--shadow);
+      box-shadow: 0 0 1rem 1rem var(--bg-color);
       transform: scale(1.01);
     }
     h3 {

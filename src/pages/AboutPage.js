@@ -35,6 +35,7 @@ const Wrapper = styled.section`
   display: grid;
   justify-items: center;
   align-items: center;
+  padding: 1rem;
 
   ${Screen.lg`
   grid-template-columns: repeat(3,1fr);

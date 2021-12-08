@@ -20,13 +20,13 @@
 
   /** sizes */
   --max-width: 1124px;
-  --header-height: 6rem;
-  --footer-height: 6rem;
-  --breadcrumb-height: 6rem;
+  --header-height: 5rem;
+  --footer-height: 5rem;
+  --breadcrumb-height: 5rem;
 
   /** styles */
   --transition: 0.3s;
-  --border: 0.2rem solid var(--green-color-1);
+  --border: 0.22rem solid var(--green-color-1);
   --shadow: 0 0 1rem 1rem var(--bg-color);
   --radius: 0.2rem;
 }
@@ -59,17 +59,17 @@ button {
 
 /*? typographi */
 html {
-  font-size: 0.437rem;
+  font-size: 0.562rem;
 }
 
 @media (min-width: 576px) {
   html {
-    font-size: 0.5rem;
+    font-size: 0.625rem;
   }
 }
 @media (min-width: 768px) {
   html {
-    font-size: 0.625rem;
+    font-size: 0.687rem;
   }
 }
 @media (min-width: 992px) {
@@ -84,7 +84,7 @@ html {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 h2 {
   font-size: 2rem;
@@ -99,7 +99,7 @@ h5 {
   font-size: 1.5rem;
 }
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 a {
   font-size: 1.3rem;

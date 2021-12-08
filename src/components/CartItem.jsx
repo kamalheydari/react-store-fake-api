@@ -53,6 +53,7 @@ const Wrapper = styled.article`
   align-items: center;
   justify-items: center;
   grid-template-columns: auto 1fr 1fr auto;
+  gap: 0 1rem;
   margin-bottom: 0.5rem;
 
   img {

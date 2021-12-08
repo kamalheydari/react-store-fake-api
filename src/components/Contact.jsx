@@ -46,7 +46,7 @@ const Wrapper = styled.section`
   }
   .contact__form {
     border-radius: var(--radius);
-    border: var(--border);
+    border: 0.22rem solid var(--green-color-1);
 
     width: min(90%, 400px);
     ${Screen.md`

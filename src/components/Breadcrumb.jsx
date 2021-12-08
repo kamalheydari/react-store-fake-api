@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Breadcrumb = ({ title, products }) => {
   return (
     <Wrapper>
-      <Link to="/home">Home /</Link>
+      <Link to="/">Home /</Link>
       {products && <Link to="/products"> prodcuts / </Link>}
       <span>{title}</span>
     </Wrapper>

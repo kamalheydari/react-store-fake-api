@@ -60,18 +60,18 @@ const Wrapper = styled.div`
   grid-template-columns: auto auto 1fr auto;
   align-items: center;
   margin-bottom: 2rem;
-  gap: 0 1rem;
+  gap: 0 0.1rem;
 
   .sort__btns {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.2rem;
+    gap: 0.5rem;
 
     button {
       margin-right: 0.3rem;
       display: inline-block;
-      padding: 0.5rem;
+      padding: 0.2rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -82,6 +82,7 @@ const Wrapper = styled.div`
     }
   }
   .sort__items {
+    font-size: 0.9rem;
     span {
       display: inline-block;
       min-width: 2rem;
@@ -93,9 +94,10 @@ const Wrapper = styled.div`
   }
   .sort__form {
     label {
-      margin-right: 0.5rem;
+      margin-right: 0.2rem;
     }
     option {
+      font-size: 1rem;
       padding: 0 0.5rem;
       background: var(--bg-color);
     }

@@ -35,7 +35,7 @@ const Wrapper = styled.section`
     border-radius: var(--radius);
     transition: var(--transition);
     &:hover {
-      box-shadow: var(--shadow);
+      box-shadow: 0 0 1rem 1rem var(--bg-color);
     }
   }
   .service__header {

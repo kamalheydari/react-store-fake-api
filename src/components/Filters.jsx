@@ -59,7 +59,7 @@ const Filters = () => {
             />
           </div>
         </form>
-        <button type="button" className="clear-btn red-box" onClick={clearFilters}>
+        <button type="button" className="clear-btn " onClick={clearFilters}>
           Reset Filters
         </button>
       </div>
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
     gap: 0.8rem;
     button {
       color: var(--blue-color-1);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       padding-right: 0.5rem;
       transition: var(--transition);
       border-bottom: 0.2rem solid transparent;
@@ -107,7 +107,14 @@ const Wrapper = styled.div`
 
   .clear-btn {
     font-size: 1.3rem;
-
+    padding: 0.3rem 0.7rem;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    border: 0.2rem solid var(--red-color-1);
+    &:hover {
+      background: var(--red-color-1);
+      color: var(--white-color);
+    }
   }
   h4 {
     color: var(--blue-color-4);
