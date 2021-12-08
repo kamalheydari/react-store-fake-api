@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-fake-store"]=this["webpackJsonpreact-fake-store"]||[]).push([[7],{59:function(e,t,s){"use strict";s.r(t);s(2);var c=s(22),j=s(1);t.default=function(){return Object(j.jsxs)("main",{children:[Object(j.jsx)(c.m,{}),Object(j.jsx)(c.s,{}),Object(j.jsx)(c.q,{}),Object(j.jsx)(c.g,{})]})}}}]);
+//# sourceMappingURL=7.6bc49e3d.chunk.js.map
