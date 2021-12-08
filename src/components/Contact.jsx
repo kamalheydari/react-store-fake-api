@@ -47,7 +47,7 @@ const Wrapper = styled.section`
   .contact__form {
     border-radius: var(--radius);
     border: 0.22rem solid var(--green-color-1);
-
+    padding: 0.3rem;
     width: min(90%, 400px);
     ${Screen.md`
     align-self: flex-end;
@@ -64,8 +64,8 @@ const Wrapper = styled.section`
     }
     button {
       background: var(--green-color-1);
-
-      padding: 0.5rem;
+      border-radius: var(--radius);
+      padding: 0.5rem 1rem;
       transition: var(--transition);
       &:hover {
         color: var(--white-color);
