@@ -10,9 +10,7 @@ const EmptyCart = () => {
           <h2>
             Your cart is <span>empty</span>
           </h2>
-          <Link to="/products" className="green-box">
-            Shop now
-          </Link>
+          <Link to="/products">Shop now</Link>
         </div>
       </Wrapper>
     </main>
@@ -28,6 +26,11 @@ const Wrapper = styled.section`
       span {
         color: var(--red-color-1);
       }
+    }
+    a {
+      border: 0.2rem solid var(--green-color-1);
+      border-radius: var(--radius);
+      padding: 0.3rem 1rem;
     }
   }
 `;

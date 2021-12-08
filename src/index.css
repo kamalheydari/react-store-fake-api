@@ -72,11 +72,7 @@ html {
     font-size: 0.75rem;
   }
 }
-@media (min-width: 1200px) {
-  html {
-    /* font-size: 0.75rem; */
-  }
-}
+
 
 h1 {
   font-size: 2.4rem;
@@ -94,10 +90,10 @@ h5 {
   font-size: 1.5rem;
 }
 p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 a {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 /*? global styles */
