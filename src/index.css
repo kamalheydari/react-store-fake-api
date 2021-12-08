@@ -136,19 +136,3 @@ a:hover {
   margin-top: var(--header-height);
   min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
 }
-
-/** react transition group */
-.fade-enter {
-  opacity: 0;
-  z-index: 1;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.fade-exit {
-  opacity: 0;
-  position: absolute;
-}
