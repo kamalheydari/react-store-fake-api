@@ -5,6 +5,8 @@ import { BsFillGridFill, BsList } from "react-icons/bs";
 
 import { useFilterContext } from "../contexts/filter_context";
 
+import Screen from "../utils/Screen";
+
 const Sort = () => {
   const {
     filtered_products: products,
@@ -61,6 +63,9 @@ const Wrapper = styled.div`
   align-items: center;
   margin-bottom: 2rem;
   gap: 0 0.1rem;
+  ${Screen.sm`
+        gap:0 1rem;
+      `}
 
   .sort__btns {
     display: flex;
@@ -75,9 +80,12 @@ const Wrapper = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      ${Screen.md`
+        padding: 0.5rem;
+      `}
     }
     svg {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: var(--blue-color-1);
     }
   }
@@ -90,7 +98,7 @@ const Wrapper = styled.div`
     }
   }
   hr {
-    border-bottom: 0.2rem solid red;
+    border-bottom: 0.2rem solid var(--red-color-1);
   }
   .sort__form {
     label {
