@@ -2,8 +2,6 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-import Screen from "../utils/Screen";
-
 import { FaShoppingCart } from "react-icons/fa";
 
 import { useProductsContext } from "../contexts/products_context";
