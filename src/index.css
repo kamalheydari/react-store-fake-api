@@ -121,7 +121,6 @@ img {
 
 section {
   width: min(100%, var(--max-width));
-  padding: 1rem;
   margin: 0 auto;
 }
 main {
