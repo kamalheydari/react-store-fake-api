@@ -38,12 +38,14 @@ const AddToCart = ({ product }) => {
 
 const Wrapper = styled.div`
   #link {
+    padding: 0.3rem 0.8rem;
     color: var(--green-color-1);
-    border: var(--border);
+    border-radius: var(--radius);
+    border: 0.2rem solid var(--green-color-1);
     &:hover {
       color: var(--blue-color-1);
       background: transparent;
-      box-shadow: var(--shadow);
+      box-shadow: 0 0 1rem 1rem var(--bg-color);
     }
   }
 `;

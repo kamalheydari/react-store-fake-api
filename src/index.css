@@ -14,9 +14,6 @@
   --yellow-color-1: #ffcc1d;
   --gray-color-1: #423f3ede;
   --white-color: #fff;
-  /* do no change */
-  --black-color-1: #171010;
-  --gray-color-2: #2b2b2b;
 
   /** sizes */
   --max-width: 1124px;
@@ -26,8 +23,6 @@
 
   /** styles */
   --transition: 0.3s;
-  --border: 0.22rem solid var(--green-color-1);
-  --shadow: 0 0 1rem 1rem var(--bg-color);
   --radius: 0.2rem;
 }
 
@@ -74,12 +69,12 @@ html {
 }
 @media (min-width: 992px) {
   html {
-    font-size: 0.687rem;
+    font-size: 0.75rem;
   }
 }
 @media (min-width: 1200px) {
   html {
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
   }
 }
 
@@ -145,27 +140,6 @@ a:hover {
 .page-w-b {
   margin-top: var(--header-height);
   min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
-}
-
-.green-box {
-  padding: 0.5rem 1rem;
-  border: var(--border);
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-.green-box:hover {
-  background: var(--white-color);
-}
-
-.red-box {
-  border: 0.2rem solid var(--red-color-1);
-  padding: 0.3rem 0.5rem;
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-.red-box:hover {
-  background: var(--red-color-1);
-  color: var(--white-color);
 }
 
 @keyframes spinner {
