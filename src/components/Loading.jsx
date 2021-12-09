@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Loading = () => {
+const Loading = (props) => {
   return (
     <Wrapper>
       <div className="loading"></div>
@@ -14,6 +14,11 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: ${(props) =>
+    props.lazy ||
+    "calc(100vh - (var(--header-height) + var(--footer-height)))"};
+
+  margin-top: ${(props) => props.lazy || "var(--header-height)"};
 
   @keyframes spinner {
     to {
