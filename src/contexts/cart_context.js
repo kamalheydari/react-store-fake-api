@@ -42,7 +42,6 @@ export const CartProvider = ({ children }) => {
   };
 
   const toggleAmount = (id, value) => {
-    console.log({ id, value });
     dispatch({ type: TOGGLE_CART_ITEM, payload: { id, value } });
   };
 
