@@ -9,62 +9,65 @@ const Filters = () => {
   const {
     filters: { text, category, min_price, max_price, price },
     updateFilters,
-    all_products,
+    all_products: products,
     clearFilters,
   } = useFilterContext();
 
-  const categories = getUniqueValues(all_products, "category");
+  const categories = getUniqueValues(products, "category");
 
-  return (
-    <Wrapper>
-      <div className="content">
-        <form className="filter__form" onSubmit={(e) => e.preventDefault()}>
-          <div className="form__control">
-            <input
-              type="text"
-              name="text"
-              placeholder="Search"
-              className="search__input"
-              value={text}
-              onChange={updateFilters}
-            />
-          </div>
-          <div className="form__control">
-            <h4>Categories</h4>
-            <div className="form__categories">
-              {categories.map((c, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  name="category"
-                  className={category === c ? "active" : null}
-                  onClick={updateFilters}
-                  data-category={c}
-                >
-                  {c}
-                </button>
-              ))}
+  if (products.length > 0) {
+    return (
+      <Wrapper>
+        <div className="content">
+          <form className="filter__form" onSubmit={(e) => e.preventDefault()}>
+            <div className="form__control">
+              <input
+                type="text"
+                name="text"
+                placeholder="Search"
+                className="search__input"
+                value={text}
+                onChange={updateFilters}
+              />
             </div>
-          </div>
-          <div className="form__control">
-            <h4>Price</h4>
-            <p className="price">${price}</p>
-            <input
-              type="range"
-              name="price"
-              min={min_price}
-              max={max_price}
-              value={price}
-              onChange={updateFilters}
-            />
-          </div>
-        </form>
-        <button type="button" className="clear-btn " onClick={clearFilters}>
-          Reset Filters
-        </button>
-      </div>
-    </Wrapper>
-  );
+            <div className="form__control">
+              <h4>Categories</h4>
+              <div className="form__categories">
+                {categories.map((c, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    name="category"
+                    className={category === c ? "active" : null}
+                    onClick={updateFilters}
+                    data-category={c}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="form__control">
+              <h4>Price</h4>
+              <p className="price">${price}</p>
+              <input
+                type="range"
+                name="price"
+                min={min_price}
+                max={max_price}
+                value={price}
+                onChange={updateFilters}
+              />
+            </div>
+          </form>
+          <button type="button" className="clear-btn " onClick={clearFilters}>
+            Reset Filters
+          </button>
+        </div>
+      </Wrapper>
+    );
+  }
+  return <div></div>;
 };
 
 const Wrapper = styled.div`
