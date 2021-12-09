@@ -15,7 +15,7 @@ const CheckoutPage = React.lazy(() => import("../pages/CheckoutPage"));
 
 const Routes = () => {
   return (
-    <React.Suspense fallback={<Loading />}>
+    <React.Suspense fallback={<Loading lazy />}>
       <Switch>
         <Route path="/" exact={true} component={HomePage} />
         <Route
