@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { useProductsContext } from "../contexts/products_context";
 
-import { GridProducts, Loading, Error } from "../components";
+import { GridProducts, Loading, Error } from ".";
 
 const PopularProducts = () => {
   const {
