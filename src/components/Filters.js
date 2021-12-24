@@ -74,7 +74,7 @@ const Wrapper = styled.div`
   margin-bottom: 2rem;
   .content {
     position: sticky;
-    top: 1rem;
+    top: 7rem;
   }
   .filter__form {
     display: grid;
