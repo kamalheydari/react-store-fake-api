@@ -43,6 +43,9 @@ const Wrapper = styled.article`
   .total__items {
     span {
       color: var(--blue-color-1);
+      display: inline-block;
+      text-align: center;
+      width: 12rem;
     }
   }
   .total__price {
