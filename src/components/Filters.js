@@ -111,6 +111,7 @@ const Wrapper = styled.div`
   .clear-btn {
     font-size: 1.3rem;
     padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
     letter-spacing: 1px;
     transition: var(--transition);
     border: 0.2rem solid var(--red-color-1);
@@ -121,6 +122,7 @@ const Wrapper = styled.div`
   }
   h4 {
     color: var(--blue-color-4);
+    margin: 1rem 0 0.2rem;
   }
 `;
 
