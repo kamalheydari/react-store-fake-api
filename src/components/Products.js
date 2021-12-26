@@ -1,6 +1,6 @@
 import React from "react";
 
-import { GridProducts, ListProducts } from "../components";
+import { GridProducts, ListProducts } from ".";
 
 import { useProductsContext } from "../contexts/products_context";
 import { useFilterContext } from "../contexts/filter_context";
