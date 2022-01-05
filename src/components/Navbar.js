@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import Screen from "../utils/Screen";
@@ -25,9 +25,12 @@ const Navbar = () => {
           <ul>
             {links.map(({ id, url, text }) => (
               <li key={id}>
-                <Link to={url} className={url === pathname ? "active" : null}>
+                <NavLink
+                  to={url}
+                  className={({ isActive }) => (isActive ? "active" : null)}
+                >
                   {text}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>

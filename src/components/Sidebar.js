@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 
 import { links } from "../utils/constants";
 
@@ -14,7 +14,7 @@ import Screen from "../utils/Screen";
 
 const Sidebar = () => {
   const { closeSidebar, isSidebarOpen } = useProductsContext();
-  const { pathname } = useLocation();
+
   return (
     <Wrapper>
       <aside className={isSidebarOpen ? "show-sidebar sidebar" : "sidebar"}>
@@ -30,13 +30,13 @@ const Sidebar = () => {
           <ul>
             {links.map(({ id, url, text }) => (
               <li key={id}>
-                <Link
-                  className={url === pathname ? "active" : null}
+                <NavLink
+                   className={({ isActive }) => (isActive ? "active" : null)}
                   to={url}
                   onClick={closeSidebar}
                 >
                   {text}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>

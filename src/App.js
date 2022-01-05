@@ -1,18 +1,16 @@
 import React from "react";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 //? Components
 import { Navbar, Sidebar, Footer } from "./components";
-import Routes from "./routes/Routes";
-
-
+import ConfigRoutes from "./routes/ConfigRoutes";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Sidebar />
-      <Routes />
+      <ConfigRoutes />
       <Footer />
     </Router>
   );

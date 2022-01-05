@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <p>
-        &copy;{new Date().getFullYear()} by kamal heydari, All rights reserved
+        &copy;{new Date().getFullYear()} by
+        <a href="https://github.com/kamalheydari"> kamal heydari</a>, All rights
+        reserved
       </p>
     </FooterWrapper>
   );
@@ -19,6 +21,9 @@ const FooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
+  a {
+    color: #fff;
+  }
 `;
 
 export default Footer;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 import { FaShoppingCart } from "react-icons/fa";
@@ -10,14 +10,14 @@ import { useCartContext } from "../contexts/cart_context";
 const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
   const { total_items } = useCartContext();
-  const { pathname } = useLocation();
+
   return (
     <Wrapper>
-      <Link
+      <NavLink
         to="/cart"
         onClick={closeSidebar}
-        className={
-          pathname === "/cart" ? "cart__container active " : "cart__container"
+        className={({ isActive }) =>
+          isActive ? "cart__container active" : "cart__container"
         }
       >
         Cart
@@ -25,7 +25,7 @@ const CartButtons = () => {
           <FaShoppingCart />
           <span>{total_items}</span>
         </div>
-      </Link>
+      </NavLink>
     </Wrapper>
   );
 };

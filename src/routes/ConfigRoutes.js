@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { Loading } from "../components";
 
@@ -13,24 +13,20 @@ const SingleProductPage = React.lazy(() =>
 const CartPage = React.lazy(() => import("../pages/CartPage"));
 const CheckoutPage = React.lazy(() => import("../pages/CheckoutPage"));
 
-const Routes = () => {
+const ConfigRoutes = () => {
   return (
     <React.Suspense fallback={<Loading lazy />}>
-      <Switch>
-        <Route path="/" exact={true} component={HomePage} />
-        <Route
-          path="/products/:id"
-          exact={true}
-          component={SingleProductPage}
-        />
-        <Route path="/products" component={ProductsPage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/cart" component={CartPage} />
-        <Route path="/checkout" component={CheckoutPage} />
-        <Route path="*" component={ErrorPage} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products/:id" element={<SingleProductPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </React.Suspense>
   );
 };
 
-export default Routes;
+export default ConfigRoutes;
