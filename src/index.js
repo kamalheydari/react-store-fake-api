@@ -8,6 +8,8 @@ import { FilterProvider } from "./contexts/filter_context";
 import { CartProvider } from "./contexts/cart_context";
 //? Styles
 import "./index.css";
+/*? fonts */
+import '@fontsource/poppins'
 
 ReactDOM.render(
   <ProductsProvider>
