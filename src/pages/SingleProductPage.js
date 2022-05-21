@@ -4,9 +4,17 @@ import styled from "styled-components";
 
 import { useProductsContext } from "../contexts/products_context";
 
-import { Breadcrumb, Error, Loading, Stars, AddToCart } from "../components";
+import {
+  Breadcrumb,
+  Error,
+  Loading,
+  Stars,
+  AddToCart,
+  Button,
+  Typography,
+} from "../components";
 
-import Screen from "../utils/Screen";
+import Screen from "../styles/Screen";
 
 const SingleProductPage = () => {
   const navigate = useNavigate();
@@ -35,7 +43,7 @@ const SingleProductPage = () => {
 
   if (loading) {
     return (
-      <div className="page-w-b">
+      <div className='page-w-b'>
         <Loading />
       </div>
     );
@@ -43,7 +51,7 @@ const SingleProductPage = () => {
 
   if (error) {
     return (
-      <div className="page-w-b">
+      <div className='page-w-b'>
         <Error />
       </div>
     );
@@ -52,22 +60,24 @@ const SingleProductPage = () => {
   return (
     <main>
       <Breadcrumb title={title} products />
-      <Wrapper className="page">
+      <Wrapper className='page'>
         <article>
-          <div className="product__img">
+          <div className='product__img'>
             <img src={image} alt={title} />
           </div>
-          <div className="product__info">
-            <Link to="/products">back to products</Link>
-            <h2>{title}</h2>
+          <div className='product__info'>
+            <Button variant='secondary'>
+              <Link to='/products'>back to products</Link>
+            </Button>
+            <Typography.H2>{title}</Typography.H2>
             <Stars stars={rating} />
-            <p className="info__price">
+            <Typography.P className='info__price'>
               Price : <span>${price}</span>
-            </p>
-            <p className="info__category">
+            </Typography.P>
+            <Typography.P className='info__category'>
               Category : <span>{category}</span>
-            </p>
-            <p>{description}</p>
+            </Typography.P>
+            <Typography.P>{description}</Typography.P>
             <AddToCart product={product} />
           </div>
         </article>
@@ -80,6 +90,7 @@ const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+
   article {
     padding: 1.5rem 1rem;
     background: #fff;
@@ -89,36 +100,31 @@ const Wrapper = styled.section`
     ${Screen.md`
     grid-template-columns: 1fr 1fr 1fr;
     `}
+
     .product__img {
       img {
         max-width: 20rem;
       }
     }
+
     .product__info {
       display: grid;
       gap: 1rem;
       ${Screen.md`
-    grid-column: 2/4;
+      grid-column: 2/4;
     `}
-      a {
-        height: max-content;
+
+      button {
         width: max-content;
-        padding: 0.2rem 1.5rem;
-        letter-spacing: 1px;
-        color: var(--gray-color-1);
-        transition: var(--transition);
-        border: 0.2rem solid var(--red-color-1);
-        &:hover {
-          background: var(--red-color-1);
-          color: var(--white-color);
-        }
       }
+
       .info__price {
         color: var(--green-color-1);
         span {
           color: var(--red-color-1);
         }
       }
+
       .info__category {
         color: var(--green-color-1);
         span {

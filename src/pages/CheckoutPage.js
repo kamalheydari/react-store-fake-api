@@ -2,26 +2,27 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { Typography, Button } from "../components";
+
 const CheckoutPage = () => {
   return (
-    <Wrapper className="page-w-b">
+    <Wrapper className='page-w-b'>
       <div>
-        <h2>Checkout Successfully</h2>
-        <Link to="/products">Back to shop</Link>
+        <Typography.H2>Checkout Successfully</Typography.H2>
+        <Button variant='primary'>
+          <Link to='/products'>Back to shop</Link>
+        </Button>
       </div>
     </Wrapper>
   );
 };
+
 const Wrapper = styled.section`
   display: grid;
   place-items: center;
+  text-align: center;
   h2 {
-    margin-bottom: 1rem;
-  }
-  a {
-    border: 0.2rem solid var(--green-color-1);
-    border-radius: var(--radius);
-    padding: 0.2rem 1rem;
+    margin-bottom: 2rem;
   }
 `;
 export default CheckoutPage;

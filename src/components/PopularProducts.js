@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { useProductsContext } from "../contexts/products_context";
 
-import { GridProducts, Loading, Error } from ".";
+import { GridProducts, Loading, Error, Typography } from ".";
 
 const PopularProducts = () => {
   const {
@@ -22,7 +22,7 @@ const PopularProducts = () => {
 
   return (
     <Wrapper>
-      <h2>Most popular products</h2>
+      <Typography.H2>Most popular products</Typography.H2>
       <GridProducts products={products.slice(0, 3)} />
     </Wrapper>
   );
@@ -33,8 +33,7 @@ const Wrapper = styled.section`
   height: auto;
 
   h2 {
-    margin-bottom: 1rem;
-    color: var(--blue-color-1);
+    margin-bottom: 3rem;
   }
 `;
 

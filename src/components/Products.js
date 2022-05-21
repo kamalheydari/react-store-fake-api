@@ -5,11 +5,13 @@ import { GridProducts, ListProducts } from ".";
 import { useProductsContext } from "../contexts/products_context";
 import { useFilterContext } from "../contexts/filter_context";
 
-import { Loading, Error } from ".";
+import { Loading, Error, Typography } from ".";
 const Products = () => {
   const { filtered_products: products, grid_view } = useFilterContext();
-  const { products_loading: loading, products_error: error } =
-    useProductsContext();
+  const {
+    products_loading: loading,
+    products_error: error,
+  } = useProductsContext();
 
   if (error) {
     return <Error />;
@@ -20,7 +22,9 @@ const Products = () => {
   }
 
   if (products.length < 1) {
-    return <h5>Sorry, no products matched your search...</h5>;
+    return (
+      <Typography.H4>Sorry, no products matched your search...</Typography.H4>
+    );
   }
 
   if (grid_view === false) {

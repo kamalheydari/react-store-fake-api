@@ -1,55 +1,49 @@
 import React from "react";
 import styled from "styled-components";
 
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { Icons } from ".";
 
 const AmountButtons = ({ increase, decrease, amount }) => {
   return (
     <Wrapper>
       <button
-        type="button"
-        className={amount < 2 ? "dec-btn opacity " : "dec-btn"}
+        type='button'
+        className={amount < 2 && "opacity "}
         onClick={decrease}
       >
-        <FaMinus />
+        <Icons.FaMinusStyled />
       </button>
-      <h2>{amount}</h2>
-      <button type="button" className="inc-btn" onClick={increase}>
-        <FaPlus />
+      <span>{amount}</span>
+      <button type='button' onClick={increase}>
+        <Icons.FaPlusStyled />
       </button>
     </Wrapper>
   );
 };
+
 const Wrapper = styled.div`
   width: max-content;
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  .dec-btn {
-    color: var(--red-color-1);
-  }
-  .inc-btn {
-    color: var(--green-color-1);
-  }
+  gap: 1rem;
 
   .opacity {
     opacity: 0.5;
     cursor: auto;
   }
 
-  h2 {
+  span {
     text-align: center;
     min-width: 2.6rem;
+    font-size: var(--fs-700);
+    color: var(--gray-color-1);
   }
 
   button {
     padding: 0.3rem;
     display: inline-block;
     transform: scale(1);
-    svg {
-      font-size: 1.5rem;
-    }
   }
+
   button:active {
     transform: scale(0.9);
   }

@@ -26,6 +26,7 @@ const Stars = ({ stars = { rate: "" } }) => {
 const Wrapper = styled.div`
   span {
     font-size: 1.4rem;
+    margin-inline: 0.1rem;
     color: var(--yellow-color-1);
   }
 `;

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Breadcrumb } from "../components";
+import { Breadcrumb,Typography } from "../components";
 
-import Screen from "../utils/Screen";
+import Screen from "../styles/Screen";
 
 import img from "../assets/about_img.jpg";
 
@@ -13,15 +13,15 @@ const AboutPage = () => {
       <Breadcrumb title="About" />
       <Wrapper className="page">
         <div className="about__text">
-          <h1>About Us</h1>
-          <p>
+          <Typography.H1>About Us</Typography.H1>
+          <Typography.P>
             H&M Group is a family of brands and businesses, making it possible
             for customers around the world to express themselves through fashion
             and design, and to choose a more sustainable lifestyle. We create
             value for people and society in general by delivering our customer
             offering and by developing with a focus on sustainable and
             profitable growth.
-          </p>
+          </Typography.P>
         </div>
         <div className="about__img">
           <img src={img} alt="about-img" />

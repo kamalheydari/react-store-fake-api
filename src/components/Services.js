@@ -3,18 +3,20 @@ import styled from "styled-components";
 
 import { services } from "../utils/constants";
 
-import Screen from "../utils/Screen";
+import Screen from "../styles/Screen";
+
+import { Typography } from ".";
 
 const Services = () => {
   return (
     <Wrapper>
       {services.map(({ id, name, icon, text }) => (
-        <article key={id} className="service">
-          <div className="service__header">
+        <article key={id} className='service'>
+          <div className='service__header'>
             {icon}
-            <h3>{name}</h3>
+            <Typography.H3>{name}</Typography.H3>
           </div>
-          <p>{text}</p>
+          <Typography.P>{text}</Typography.P>
         </article>
       ))}
     </Wrapper>
@@ -29,6 +31,7 @@ const Wrapper = styled.section`
   ${Screen.md`  
   grid-template-columns: 1fr 1fr 1fr;
   `}
+
   .service {
     padding: 1rem 1.5rem;
     border: 0.2rem solid var(--green-color-1);
@@ -38,6 +41,7 @@ const Wrapper = styled.section`
       box-shadow: 0 0 1rem 1rem var(--bg-color);
     }
   }
+
   .service__header {
     display: flex;
     align-items: center;
@@ -49,6 +53,7 @@ const Wrapper = styled.section`
       margin-right: 2rem;
     }
   }
+
   p {
     text-align: justify;
   }

@@ -11,9 +11,7 @@ import {
   GET_SINGLE_PRODUCT_SUCCESS,
 } from "../utils/actions";
 
-
 import { products_reducer as reducer } from "../reducers/products_reducer";
-
 
 const initialState = {
   isSidebarOpen: false,
@@ -44,9 +42,7 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
-
   const fetchSingleProduct = async (params) => {
-
     dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
     try {
       const response = await fetch(`${API_ENDPOINT}/${params}`);

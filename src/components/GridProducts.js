@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import Screen from "../utils/Screen";
+import Screen from "../styles/Screen";
 
 import { truncate } from "../utils/helpers";
 
-import { Stars } from ".";
+import { Stars, Typography } from ".";
 
 const GridProducts = ({ products }) => {
   return (
@@ -16,7 +16,7 @@ const GridProducts = ({ products }) => {
           <Link to={`/products/${id}`}>
             <img src={image} alt={title} />
           </Link>
-          <h3 title={title}>{truncate(title, 25)}</h3>
+          <Typography.H3 title={title}>{truncate(title, 25)}</Typography.H3>
           <div>
             <p>${price}</p>
             <Stars stars={rating} />
@@ -32,30 +32,26 @@ const Wrapper = styled.div`
   gap: 2rem 1.5rem;
   justify-content: center;
 
-  ${Screen.sm`
+  ${Screen.md`
   grid-template-columns: 1fr 1fr;
 `}
-  ${Screen.lg`
+  ${Screen.xl`
   grid-template-columns: 1fr 1fr 1fr ;
 `}
-
 
 article {
     padding: 1rem;
     background: var(--white-color);
     border-radius: var(--radius);
     transition: var(--transition);
-    transform: scale(1);
     min-height: 35rem;
 
     &:hover {
       box-shadow: 0 0 1rem 1rem var(--bg-color);
-      transform: scale(1.01);
     }
     h3 {
       margin: 1rem 0;
       min-height: 2.4rem;
-      color: var(--blue-color-4);
     }
     img {
       max-height: 25rem;

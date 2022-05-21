@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Typography } from ".";
+
 const Error = () => {
   return (
     <Wrapper>
-      <h2>there was an error</h2>
+      <Typography.H2>there was an error</Typography.H2>
     </Wrapper>
   );
 };
+
 const Wrapper = styled.div`
   padding: 10rem;
   display: flex;

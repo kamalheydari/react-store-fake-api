@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { links } from "../utils/constants";
 
-import { FaTimes, FaStore } from "react-icons/fa";
-
-import { CartButtons } from ".";
+import { CartButtons, Icons } from ".";
 
 import { useProductsContext } from "../contexts/products_context";
 
-import Screen from "../utils/Screen";
+import Screen from "../styles/Screen";
 
 const Sidebar = () => {
   const { closeSidebar, isSidebarOpen } = useProductsContext();
@@ -18,20 +16,20 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <aside className={isSidebarOpen ? "show-sidebar sidebar" : "sidebar"}>
-        <div className="sidebar-header">
-          <Link className="sidebar__logo" to="/" onClick={closeSidebar}>
-            <FaStore />
+        <div className='sidebar-header'>
+          <Link to='/' onClick={closeSidebar}>
+            <Icons.FaStoreStyled />
           </Link>
-          <button type="button" onClick={closeSidebar} className="sidebar__btn">
-            <FaTimes />
+          <button type='button' onClick={closeSidebar}>
+            <Icons.FaTimesStyled />
           </button>
         </div>
-        <nav className="sidebar__nav">
+        <nav className='sidebar__nav'>
           <ul>
             {links.map(({ id, url, text }) => (
               <li key={id}>
                 <NavLink
-                   className={({ isActive }) => (isActive ? "active" : null)}
+                  className={({ isActive }) => (isActive ? "active" : null)}
                   to={url}
                   onClick={closeSidebar}
                 >
@@ -41,7 +39,7 @@ const Sidebar = () => {
             ))}
           </ul>
         </nav>
-        <div className="sidebar__cart">
+        <div className='sidebar__cart'>
           <CartButtons />
         </div>
       </aside>
@@ -84,7 +82,7 @@ const Wrapper = styled.div`
     a {
       display: block;
       padding: 1rem;
-      font-size: 1.8rem;
+      font-size: var(--fs-600);
       &:hover {
         padding-left: 1.5rem;
       }
@@ -96,16 +94,7 @@ const Wrapper = styled.div`
 
   .sidebar__cart {
     width: max-content;
-    margin: 0 auto;
-  }
-
-  .sidebar__btn {
-    color: var(--red-color-1);
-    font-size: 2.2rem;
-  }
-  .sidebar__logo {
-    font-size: 2.2rem;
-    color: var(--blue-color-1);
+    margin-inline: auto;
   }
 `;
 

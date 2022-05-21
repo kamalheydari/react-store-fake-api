@@ -20,6 +20,9 @@ import AmountButtons from "./AmountButtons";
 import CartItem from "./CartItem";
 import EmptyCart from "./EmptyCart";
 import CartTotals from "./CartTotals";
+import Typography from "./share/Typography";
+import Button from "./share/Button";
+import Icons from "./share/Icons";
 
 export {
   Navbar,
@@ -44,4 +47,7 @@ export {
   CartItem,
   EmptyCart,
   CartTotals,
+  Typography,
+  Button,
+  Icons,
 };

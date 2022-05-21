@@ -2,11 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import {Button,Typography} from '../components';
+
 const ErrorPage = () => {
   return (
     <Wrapper className="page-w-b">
-      <h2>404</h2>
+      <Typography.H2>404</Typography.H2>
+      <Button variant='secondary'>
+
       <Link to="/">Back To Home</Link>
+      </Button>
     </Wrapper>
   );
 };
@@ -21,11 +26,7 @@ const Wrapper = styled.section`
     font-size: 6rem;
     color: var(--red-color-1);
   }
-  a {
-    display: inline-block;
-    border: 0.15rem solid var(--green-color-1);
-    padding: 0.5rem;
-  }
+
 `;
 
 export default ErrorPage;

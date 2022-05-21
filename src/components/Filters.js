@@ -5,6 +5,8 @@ import { useFilterContext } from "../contexts/filter_context";
 
 import { getUniqueValues } from "../utils/helpers";
 
+import { Typography, Button } from ".";
+
 const Filters = () => {
   const {
     filters: { text, category, min_price, max_price, price },
@@ -18,26 +20,26 @@ const Filters = () => {
   if (products.length > 0) {
     return (
       <Wrapper>
-        <div className="content">
-          <form className="filter__form" onSubmit={(e) => e.preventDefault()}>
-            <div className="form__control">
+        <div className='content'>
+          <form className='filter__form' onSubmit={(e) => e.preventDefault()}>
+            <div className='form__control'>
               <input
-                type="text"
-                name="text"
-                placeholder="Search"
-                className="search__input"
+                type='text'
+                name='text'
+                placeholder='Search'
+                className='search__input'
                 value={text}
                 onChange={updateFilters}
               />
             </div>
-            <div className="form__control">
-              <h4>Categories</h4>
-              <div className="form__categories">
+            <div className='form__control'>
+              <Typography.H4>Categories</Typography.H4>
+              <div className='form__categories'>
                 {categories.map((c, index) => (
                   <button
                     key={index}
-                    type="button"
-                    name="category"
+                    type='button'
+                    name='category'
                     className={category === c ? "active" : null}
                     onClick={updateFilters}
                     data-category={c}
@@ -47,12 +49,12 @@ const Filters = () => {
                 ))}
               </div>
             </div>
-            <div className="form__control">
-              <h4>Price</h4>
-              <p className="price">${price}</p>
+            <div className='form__control'>
+              <Typography.H4>Price</Typography.H4>
+              <p className='price'>${price}</p>
               <input
-                type="range"
-                name="price"
+                type='range'
+                name='price'
                 min={min_price}
                 max={max_price}
                 value={price}
@@ -60,9 +62,13 @@ const Filters = () => {
               />
             </div>
           </form>
-          <button type="button" className="clear-btn " onClick={clearFilters}>
+          <Button
+            variant='secondary'
+            className='clear-btn'
+            onClick={clearFilters}
+          >
             Reset Filters
-          </button>
+          </Button>
         </div>
       </Wrapper>
     );
@@ -72,33 +78,46 @@ const Filters = () => {
 
 const Wrapper = styled.div`
   margin-bottom: 2rem;
+
   .content {
     position: sticky;
     top: 7rem;
   }
+
   .filter__form {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
   }
+
   .search__input {
     background: var(--blue-color-3);
-    border-radius: 0.3rem;
-    padding: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: min(100%, 200px);
+    font-size: var(--fs-400);
   }
+
+  .form__control > *:not(:first-child) {
+    margin-top: 1rem;
+  }
+
   .form__categories {
     display: grid;
     justify-items: flex-start;
-    gap: 0.8rem;
+    gap: 1rem;
+
     button {
       color: var(--blue-color-1);
-      font-size: 1.4rem;
+      font-size: var(--fs-500);
       padding-right: 0.5rem;
+      text-transform: capitalize;
       transition: var(--transition);
-      border-bottom: 0.2rem solid transparent;
+      border-bottom: 0.3rem solid transparent;
       &:hover {
         padding-left: 0.5rem;
       }
     }
+
     .active {
       border-bottom-color: var(--green-color-1);
     }
@@ -106,23 +125,11 @@ const Wrapper = styled.div`
 
   .price {
     color: var(--red-color-1);
+    font-size: var(--fs-500);
   }
 
   .clear-btn {
-    font-size: 1.3rem;
-    padding: 0.3rem 0.7rem;
-    margin-top: 1rem;
-    letter-spacing: 1px;
-    transition: var(--transition);
-    border: 0.2rem solid var(--red-color-1);
-    &:hover {
-      background: var(--red-color-1);
-      color: var(--white-color);
-    }
-  }
-  h4 {
-    color: var(--blue-color-4);
-    margin: 1rem 0 0.2rem;
+    margin-block: 2rem;
   }
 `;
 
