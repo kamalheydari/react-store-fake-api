@@ -44,7 +44,8 @@ const Wrapper = styled.div`
     }
 
     img {
-      max-width: 14rem;
+      width:min( 25vw,220px);
+      height: 20rem;
       object-fit: contain;
     }
 

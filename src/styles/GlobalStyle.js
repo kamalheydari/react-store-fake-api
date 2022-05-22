@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
   --red-color-1: #da0037;
   --green-color-1: #519872;
   --yellow-color-1: #ffff00;
+  --yellow-color-2: #ffa200;
+  --gray-color-1: rgb(107,114,128);
   --gray-color-1: rgb(107,114,128);
   --white-color: #fff;
 
@@ -69,18 +71,18 @@ button {
 
 /*? typographi */
 html {
-  font-size: 0.562rem;
-
+  font-size: 0.437rem;  //7px
+  
   ${Screen.sm`
-    font-size: 0.687rem;
+    font-size: 0.562rem;  //9px
+    `}
+
+${Screen.md`
+  font-size: 0.625rem;  //10px
   `}
 
-  ${Screen.md`
-    font-size: 0.75rem;
-  `}
-
-  ${Screen.lg`
-    font-size: 0.75rem;
+${Screen.lg`
+font-size: 0.75rem; //12px
   `}
 }
 

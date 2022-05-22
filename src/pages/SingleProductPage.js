@@ -97,20 +97,21 @@ const Wrapper = styled.section`
     display: grid;
     justify-items: center;
     gap: 2rem;
-    ${Screen.md`
+    ${Screen.lg`
     grid-template-columns: 1fr 1fr 1fr;
     `}
 
     .product__img {
       img {
         max-width: 20rem;
+        object-fit: contain;
       }
     }
 
     .product__info {
       display: grid;
       gap: 1rem;
-      ${Screen.md`
+      ${Screen.lg`
       grid-column: 2/4;
     `}
 
