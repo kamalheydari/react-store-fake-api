@@ -85,7 +85,7 @@ const Wrapper = styled.div`
   }
 
   .sort__items {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     span {
       display: inline-block;
       min-width: 2rem;

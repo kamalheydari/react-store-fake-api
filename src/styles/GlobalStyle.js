@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
   --fs-800: 3rem;
   --fs-700: 2.5rem;
   --fs-600: 2rem;
-  --fs-500: 1.75rem;
+  --fs-500: 1.62rem;
   --fs-400: 1.425rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
@@ -71,7 +71,7 @@ button {
 
 /*? typographi */
 html {
-  font-size: 0.5rem;  //8px
+  font-size: 0.525rem;  //8px
   
   ${Screen.sm`
     font-size: 0.562rem;  //9px

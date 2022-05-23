@@ -21,7 +21,7 @@ const H4 = styled.h4`
 `;
 
 const P = styled.p`
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
   color: var(--gray-color-1);
 `;
 
