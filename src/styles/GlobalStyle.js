@@ -71,7 +71,7 @@ button {
 
 /*? typographi */
 html {
-  font-size: 0.437rem;  //7px
+  font-size: 0.5rem;  //8px
   
   ${Screen.sm`
     font-size: 0.562rem;  //9px

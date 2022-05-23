@@ -35,7 +35,7 @@ const Sort = () => {
         </button>
       </div>
       <Typography.P className='sort__items'>
-        <span>{products.length}</span> products found
+        <span>{products.length}</span> items found
       </Typography.P>
       <div className='sort__line' />
       <form className='sort__form'>
@@ -60,7 +60,6 @@ const Sort = () => {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
   margin-bottom: 2rem;
   ${Screen.sm`
         gap:0 1rem;
