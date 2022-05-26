@@ -8,17 +8,17 @@ const GlobalStyle = createGlobalStyle`
 /* variables  */
 :root {
   /** colors */
-  --blue-color-1: #345b63;
+  --blue-color-1: #155e75;
   --blue-color-2: #edffec;
   --blue-color-3: #efeff0;
-  --blue-color-4: #5eaaa8;
-  --bg-color: #9ab7f515;
-  --red-color-1: #da0037;
-  --green-color-1: #519872;
+  --blue-color-4: #075985;
+  --bg-color: #fff;
+  --red-color-1: #e11d48;
+  --green-color-1: #16a34a;
   --yellow-color-1: #ffff00;
   --yellow-color-2: #ffa200;
-  --gray-color-1: rgb(107,114,128);
-  --gray-color-1: rgb(107,114,128);
+  --gray-color-1: #6b7280;
+  --gray-color-2: #d6d7da41;
   --white-color: #fff;
 
   /** sizes */

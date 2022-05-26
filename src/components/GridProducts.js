@@ -47,7 +47,7 @@ article {
     min-height: 35rem;
 
     &:hover {
-      box-shadow: 0 0 1rem 1rem var(--bg-color);
+      box-shadow: 0 0 1rem 1rem var(--gray-color-2);
     }
     h3 {
       margin: 1rem 0;

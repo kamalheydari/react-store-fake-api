@@ -120,6 +120,7 @@ const Wrapper = styled.div`
 
     .active {
       border-bottom-color: var(--green-color-1);
+      padding-left: 0.5rem;
     }
   }
 
@@ -130,6 +131,7 @@ const Wrapper = styled.div`
 
   .clear-btn {
     margin-block: 2rem;
+    padding: 0.75rem 1.5rem;
   }
 `;
 

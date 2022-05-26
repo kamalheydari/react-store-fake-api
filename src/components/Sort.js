@@ -112,6 +112,7 @@ const Wrapper = styled.div`
   .sort__form {
     margin-left: auto;
     label {
+      color: var(--blue-color-1);
       margin-right: 0.2rem;
       font-size: var(--fs-400);
     }

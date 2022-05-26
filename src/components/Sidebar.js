@@ -52,7 +52,7 @@ const Wrapper = styled.div`
     display:none;
 `}
   .sidebar {
-    background: var(--blue-color-2);
+    background: var(--bg-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -73,6 +73,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--blue-color-2);
     padding: 0 2rem;
     box-shadow: 0 0 1rem 1rem var(--bg-color);
   }

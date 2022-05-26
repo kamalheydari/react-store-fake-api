@@ -50,7 +50,7 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   padding-inline: 2rem;
-  box-shadow: 0 0 1rem 1rem var(--bg-color);
+  box-shadow: 0 0 5rem 0.5rem var(--bg-color);
   position: fixed;
   background: var(--blue-color-2);
   top: 0;
