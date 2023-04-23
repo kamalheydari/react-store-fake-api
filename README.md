@@ -1,4 +1,4 @@
-# React Fake Store 
+# React e-commerce With Fake Store Api 
 
 ## Using
 
